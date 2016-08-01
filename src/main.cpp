@@ -1,13 +1,23 @@
-#include <iostream>
-using namespace std;
+//============================================================================
+// Name        : FamilyTree.cpp
+// Author      : VMeta
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
 
-//TODO: Implement this code from the scratch
-/*
- * At this point your expected to be able to create your code from the scratch without any guidance.
- *
- */
+#include "FamilyTree.h"
 
-int main() {
-	cout << "Implement your code" << endl;
+using namespace VMeta;
+int main()
+{
+	FamilyTree* familyTree = new FamilyTree();
+	while(true){
+		if(!familyTree->printMenu()){
+			break;
+		}
+	}
+	delete familyTree;
+
 	return 0;
 }

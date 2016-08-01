@@ -1,21 +1,37 @@
 /*
  * Tree.h
  *
- *  Created on: May 28, 2016
- *      Author: raydelto
+ *  Created on: 29 jul. 2016
+ *      Author: José Aquino
  */
 
 #ifndef TREE_H_
 #define TREE_H_
+#include "Node.h"
+#include <iostream>
+using namespace std;
 
-namespace ITLA {
+namespace VMeta {
 
-class Tree {
-public:
-	Tree();
-	virtual ~Tree();
+	class Tree
+	{
+		private:
+			Node* _root;
+		public:
+			void familyTree();
+			void familyTree(Node* node);
+			void goThroughTree();
+			void goThroughTree(Node* node);
+			void deleteTree(Node* node);
+			Tree(Node* root);
+			Tree();
+			virtual ~Tree();
+
+			Node* getRoot() {return _root;}
+
+			void setRoot(Node* root) {_root = root;}
 };
 
-} /* namespace ITLA */
+} /* namespace VMeta */
 
 #endif /* TREE_H_ */
